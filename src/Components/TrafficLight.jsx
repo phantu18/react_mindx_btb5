@@ -5,21 +5,21 @@ import Green from "./Green";
 import "../App.css";
 
 const TrafficLight = () => {
-  const [currentLight, setCurrentLight] = useState("red");
+  const [light, setLight] = useState("red");
 
   const nextLight = () => {
     const lights = ["green", "yellow", "red"];
-    const currentIndex = lights.indexOf(currentLight);
-    const nextIndex = (currentIndex + 1) % lights.length;
-    setCurrentLight(lights[nextIndex]);
+    const lightIndex = lights.indexOf(light);
+    const nextIndex = (lightIndex + 1) % lights.length;
+    setLight(lights[nextIndex]);
   };
 
   return (
-    <div className="container_traffic_light">
-      <div className="traffic_light_flex">
-        <Green isActive={currentLight === "green"} />
-        <Yellow isActive={currentLight === "yellow"} />
-        <Red isActive={currentLight === "red"} />
+    <div className="container_light">
+      <div className="light_flex">
+        <Green isActive={light === "green"} />
+        <Yellow isActive={light === "yellow"} />
+        <Red isActive={light === "red"} />
       </div>
       <button onClick={nextLight}>Next</button>
     </div>

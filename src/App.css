@@ -1,10 +1,10 @@
-.container_traffic_light {
+.container_light {
   margin: 0 300px;
 }
-.traffic_light_flex {
+.light_flex {
   display: flex;
 }
-.traffic_light {
+.light {
   width: 150px;
   height: 150px;
   border-radius: 50%;
